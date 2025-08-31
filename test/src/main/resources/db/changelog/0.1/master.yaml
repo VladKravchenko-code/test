@@ -1,0 +1,21 @@
+databaseChangeLog:
+  - include:
+      file: create-table-roles.sql
+      relativeToChangelogFile: true
+  - include:
+      file: create-table-users.sql
+      relativeToChangelogFile: true
+  - include:
+      file: insert-roles.sql
+      relativeToChangelogFile: true
+  - include:
+      file: insert-users.sql
+      relativeToChangelogFile: true
+
+changeSet:
+  id: 0.1
+  author: V.Kravchenko
+  logicalFilePath: 0.1/master.yaml
+  changes:
+    - tagDatabase:
+        tag: 0.1
