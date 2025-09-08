@@ -19,8 +19,4 @@ public enum ErrorStatus {
         return messageTemplate;
     }
 
-    public String getFormattedMessage(Object... args) {
-        return String.format(messageTemplate, args);
-    }
-
 }

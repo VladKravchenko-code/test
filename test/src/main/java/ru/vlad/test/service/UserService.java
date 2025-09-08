@@ -11,4 +11,6 @@ public interface UserService {
 
     void updateUser(UUID userId, UserDto dto);
 
+    void deleteUser(UUID userId);
+
 }

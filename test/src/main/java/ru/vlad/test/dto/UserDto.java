@@ -1,5 +1,6 @@
 package ru.vlad.test.dto;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -12,6 +13,7 @@ import java.util.UUID;
 @Setter
 public class UserDto {
 
+    @NotNull
     private String fio;
 
     @ValidPhoneNumber
