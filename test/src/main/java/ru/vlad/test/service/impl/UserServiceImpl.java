@@ -3,6 +3,8 @@ package ru.vlad.test.service.impl;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import ru.vlad.test.data.entity.Role;
 import ru.vlad.test.data.entity.User;
@@ -42,6 +44,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
+    @Cacheable("users")
     public UserDto getUserById(UUID userId) {
         log.info("Search user in service on userId: {}", userId);
         User user = userRepository.findById(userId)
@@ -72,6 +75,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
+    @CacheEvict("users")
     public void deleteUser(UUID userId) {
         log.info("Search user in service on userId: {}", userId);
         User user = userRepository.findById(userId)

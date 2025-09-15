@@ -6,7 +6,6 @@ import org.mapstruct.MappingTarget;
 import ru.vlad.test.data.entity.Role;
 import ru.vlad.test.data.entity.User;
 import ru.vlad.test.dto.UserDto;
-
 import java.util.UUID;
 
 @Mapper(componentModel = "spring")

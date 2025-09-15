@@ -4,7 +4,6 @@ import jakarta.validation.Valid;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import ru.vlad.test.dto.UserDto;
-
 import java.util.UUID;
 
 @Validated

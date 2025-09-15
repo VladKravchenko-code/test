@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RestController;
 import ru.vlad.test.controller.UserController;
 import ru.vlad.test.dto.UserDto;
 import ru.vlad.test.service.UserService;
-
 import java.util.UUID;
 
 @Slf4j
