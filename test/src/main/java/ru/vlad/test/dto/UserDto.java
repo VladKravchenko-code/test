@@ -2,6 +2,7 @@ package ru.vlad.test.dto;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import ru.vlad.test.validation.annotation.ValidPhoneNumber;
@@ -11,6 +12,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @Getter
 @Setter
+@Builder
 public class UserDto {
 
     @NotNull
